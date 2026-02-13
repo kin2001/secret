@@ -48,11 +48,11 @@ passForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const value = passInput.value.trim();
   if (value === PASSWORD) {
-    showToast("success", "heyyy you are my loveyy", "come on in", "gif/gif-1.gif");
+    showToast("success", "heyyy you are my loveyy", "come on in", "gif/gif-2.gif");
     passInput.value = "";
     setTimeout(() => switchScreen("note"), 550);
   } else {
-    showToast("error", "Oops! wrong code", "Try the date: month + day.", "gif/gif-2.gif");
+    showToast("error", "You are not my loveyy", "That pin is wrong. Try again.", "gif/gif-3.gif");
     passInput.classList.add("invalid");
     setTimeout(() => passInput.classList.remove("invalid"), 380);
   }
