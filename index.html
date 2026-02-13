@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Loveyy — Valentine Invite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2✉family=Quicksand:wght@400;600;700&family=Pacifico&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
+  <div class="bubble-hearts" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <main class="container">
+    <section id="screen-pass" class="screen active">
+      <div class="card card-pass">
+        
+        <h1>Hi, Loveyy</h1>
+        <p class="lead">Enter our code to unlock your surprise.</p>
+        <form id="pass-form" class="pass-form">
+          <input id="pass-input" type="password" inputmode="numeric" maxlength="4" placeholder="1234" aria-label="Anniversary passcode" autocomplete="one-time-code" required>
+          <button type="submit">Open</button>
+        </form>
+        <p class="hint">Hint:Aniversary month and date -> 4 digits</p>
+      </div>
+    </section>
+
+    <section id="screen-note" class="screen">
+      <div class="card card-note">
+        <h2 class="center-title">Hello Loveyy</h2>
+        <p class="lead">i just wana say that you are so beautifull and amazing. i love you so much.</p>
+        <img src="gif/gif-1.gif" alt="Happy dance" class="main-gif" id="note-gif">
+        <button id="invite-btn" class="primary">Tap to continue</button>
+      </div>
+    </section>
+
+    <section id="screen-camera" class="screen">
+      <div class="card card-camera">
+        <h3 class="camera-title centered-title">Will you be my valentines?</h3>
+        <p class="choice-note" id="choice-note">Choose yes or no to continue.</p>
+        <div class="decision-actions" id="decision-actions">
+          <button id="yes-btn" class="pill">Yes</button>
+          <button id="no-btn" class="pill ghost">No</button>
+        </div>
+        <div id="addition-block" class="addition-block hidden">
+          <p class="lead" id="add-problem">Solve: 10 + 8 = ?</p>
+          <form id="add-form" class="add-form">
+            <input id="add-answer" type="number" inputmode="numeric" autocomplete="off" placeholder="Your answer" required>
+            <div class="add-actions">
+              <button type="submit" class="pill">Submit</button>
+              <button type="button" class="ghost pill" id="add-back">Back</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-final" class="screen">
+      <div class="card card-final">
+        <div class="final-header">
+          <h2 class="center-title">Flowers for youu!</h2>
+          <button id="letter-btn" class="letter-btn hidden" aria-label="Open letter">💌</button>
+        </div>
+        <div class="video-shell">
+          <div class="heart-video">
+            <video id="final-video" src="flower.mp4" autoplay loop playsinline preload="auto" controls poster="gif/gif-1.gif"></video>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite">
+    <div class="toast-img" id="toast-img"></div>
+    <div class="toast-body">
+      <p id="toast-title" class="toast-title"></p>
+      <p id="toast-msg" class="toast-msg"></p>
+    </div>
+  </div>
+
+  
+  <div id="modal-hard" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="hard-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <h3 id="hard-title">Oh no, the impossible quiz!</h3>
+      <p class="hard-equation">Solve: integral_0^inf (x^x + e^(x^2)) / ln(x)! dx = ?</p>
+      <p class="lead small" id="hard-note">This one is basically unsolvables. Maybe pick yes instead?</p>
+      <button id="modal-close" class="primary">Back</button>
+    </div>
+  </div>
+
+  <div id="letter-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="letter-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card letter-modal-card">
+      <h3 id="letter-title">My letter for you</h3>
+      <div class="letter-body">
+        <p>Happy Valentine's Day, Loveyyy &lt;3</p>
+        <p>Every moment with you feels special, and every day I'm thankful that I get to love you and be loved by you. You make my world softer, brighter, and more meaningful just by being in it. No matter where life takes us, my heart will always choose you.</p>
+      </div>
+      <button id="letter-close" class="primary">Close</button>
+    </div>
+  </div>
+</body>
+</html>
