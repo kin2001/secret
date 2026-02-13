@@ -210,12 +210,14 @@ function setChoiceNote(text) {
 function revealLetterButton() {
   if (letterBtn) {
     letterBtn.classList.remove("hidden");
+    letterBtn.classList.add("revealed");
   }
 }
 
 function hideLetterButton() {
   if (letterBtn) {
     letterBtn.classList.add("hidden");
+    letterBtn.classList.remove("revealed");
   }
 }
 
